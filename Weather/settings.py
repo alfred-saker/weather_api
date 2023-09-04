@@ -9,8 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-import os
-import django_heroku
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,9 +25,8 @@ SECRET_KEY = 'django-insecure-^l$+h-y_+vbb51vi)pi#wz0u18x4fal7c(jt(%9-n=3mwlkmz1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["https://prevision-780fb33d476b.herokuapp.com/","127.0.0.1"]
+ALLOWED_HOSTS = []
 
-heroku config:set DISABLE_COLLECTSTATIC=1
 # Application definition
 
 INSTALLED_APPS = [
@@ -123,7 +121,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
   os.path.join(BASE_DIR, 'static')
 ]
-djano_heroku.settings(locals())
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
