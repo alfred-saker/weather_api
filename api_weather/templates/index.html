@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container">
   <h2 style="text-align: center;margin-top: 1em;font-size: 25px;font-weight: 600;">Trouvez la météo de votre ville</h2>
-  <form action="{% url 'index' %}" method="post">
+  <form action="" method="post">
     {% csrf_token %}
     <div class="input">
       {{form.city}}
